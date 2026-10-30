@@ -5,12 +5,13 @@
 ## Материалы
 
 1. [Исходное техническое задание](sources/original/DropCRM_TZ.pdf) — сохранено без изменений.
-2. [Актуальные портреты пользователей](docs/user-personas/personas.md).
+2. [Актуальные портреты пользователей](docs/user-personas/personas.md) и [PDF с обновлёнными портретами и историями](docs/DropCRM_User_Persona_Updated.pdf).
 3. [Пользовательские истории](docs/user-stories/stories.md), [пошаговые сценарии](docs/user-stories/scenarios.md) и [UML-диаграммы](docs/user-stories/uml/README.md).
 4. [Вайрфреймы в Figma](https://www.figma.com/design/um75d2cwZ1PxkgHNm36hKr/DropCRM-%E2%80%94-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA?node-id=0-1).
 5. [Итоговый прототип в Figma](https://www.figma.com/design/ui5uMhLfFbQ5jKOqUXEPTE/DropCRM?node-id=22-2745) — экраны дропшиппера, поставщика и администратора.
 6. [Проверка удобства](docs/usability-testing.md) — наблюдения за двумя участниками и ограничения выводов.
-7. [Итоговый обзор](docs/final-report.md) — как материалы связаны и как проект изменился по сравнению с исходным ТЗ.
+7. [Итоговый обзор](docs/final-report.md) ([PDF](docs/DropCRM_Final_Report.pdf)) — как материалы связаны и как проект изменился по сравнению с исходным ТЗ.
+8. [Презентация для защиты](DropCRM_Presentation_2026.pptx) — краткое изложение проекта, изменений и результатов проверки.
 
 ## Пример для просмотра
 
