@@ -1,0 +1,21 @@
+digraph Activity {
+ graph [rankdir=TB,bgcolor="white",pad=0.3,nodesep=0.35,ranksep=0.45,label="UC-C02 · Подписка и вход в рабочее пространство" ,labelloc=t,fontname="Arial",fontsize=18];
+ node [shape=box,style="rounded,filled",fillcolor="#F4F5F7",color="#CBD2D9",fontname="Arial",fontsize=12,margin="0.17,0.10"];
+ edge [fontname="Arial",fontsize=10,color="#596774"];
+ start [shape=circle,label="",width=.16,height=.16,fillcolor="#243647",color="#243647"];
+ end [shape=doublecircle,label="",width=.16,height=.16,fillcolor="#243647",color="#243647"];
+s0 [label="Пользователь входит в аккаунт Система определяет\nроль и состояние доступа."];
+s1 [label="Открывает подписку Система показывает\nвозможности, период и согласованную стоимость;\nнеопределённая цена не подставляется произвольно."];
+s2 [label="Подтверждает подключение на известных условиях\nСистема показывает ожидание результата оплаты."];
+s3 [label="Получает успешный результат Подписка активна,\nоткрывается рабочее пространство своей роли."];
+start -> s0;
+s0 -> s1;
+s1 -> s2;
+g2 [shape=diamond,style=filled,fillcolor="#EEF2F6",label="Оплата успешна?"];
+e2 [label="Подписка не активна. Повторить оплату"];
+s2 -> g2;
+g2 -> s3 [label="Да"];
+g2 -> e2 [label="Нет"];
+e2 -> s2;
+s3 -> end;
+}

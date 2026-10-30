@@ -1,0 +1,30 @@
+digraph Activity {
+ graph [rankdir=TB,bgcolor="white",pad=0.3,nodesep=0.35,ranksep=0.45,label="UC-C01 · Регистрация и подключение" ,labelloc=t,fontname="Arial",fontsize=18];
+ node [shape=box,style="rounded,filled",fillcolor="#F4F5F7",color="#CBD2D9",fontname="Arial",fontsize=12,margin="0.17,0.10"];
+ edge [fontname="Arial",fontsize=10,color="#596774"];
+ start [shape=circle,label="",width=.16,height=.16,fillcolor="#243647",color="#243647"];
+ end [shape=doublecircle,label="",width=.16,height=.16,fillcolor="#243647",color="#243647"];
+open [label="Выбрать роль и заполнить форму"];
+valid [shape=diamond,label="Поля корректны?",fillcolor="#EEF2F6"]; role [shape=diamond,label="Роль",fillcolor="#EEF2F6"];
+error [label="Показать ошибки, сохранить данные"];
+d [label="Дропшиппер: создать аккаунт и перейти к подписке"];
+supplier [label="Поставщик: отправить заявку и ждать решения"];
+admin [label="Администратор рассматривает заявку по UC-A01"];
+ok [label="Одобрено: поставщик может подключить подписку"];
+clarify [label="Уточнение: показать причину и исправить заявку"];
+decision [shape=diamond,label="Компания одобрена?",fillcolor="#EEF2F6"];
+start -> open;
+open -> valid;
+valid -> error [label="Нет"];
+error -> open;
+valid -> role [label="Да"];
+role -> d [label="Дропшиппер"];
+d -> end;
+role -> supplier [label="Поставщик"];
+supplier -> admin;
+admin -> decision;
+decision -> ok [label="Да"];
+ok -> end;
+decision -> clarify [label="Нет"];
+clarify -> open;
+}

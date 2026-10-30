@@ -1,0 +1,21 @@
+digraph Activity {
+ graph [rankdir=TB,bgcolor="white",pad=0.3,nodesep=0.35,ranksep=0.45,label="UC-A03 · Управлять категориями и модерацией" ,labelloc=t,fontname="Arial",fontsize=18];
+ node [shape=box,style="rounded,filled",fillcolor="#F4F5F7",color="#CBD2D9",fontname="Arial",fontsize=12,margin="0.17,0.10"];
+ edge [fontname="Arial",fontsize=10,color="#596774"];
+ start [shape=circle,label="",width=.16,height=.16,fillcolor="#243647",color="#243647"];
+ end [shape=doublecircle,label="",width=.16,height=.16,fillcolor="#243647",color="#243647"];
+s0 [label="Открывает справочник и создаёт/меняет категорию\nСистема сохраняет новое значение."];
+s1 [label="Выбирает удаление категории Система проверяет\nсвязанные предложения."];
+s2 [label="Если категория свободна, подтверждает удаление\nСистема показывает список без неё."];
+s3 [label="Рассматривает предложение и решение о публикации\nСистема сохраняет решение и причину снятия;\nпоставщик видит результат."];
+start -> s0;
+s0 -> s1;
+g1 [shape=diamond,style=filled,fillcolor="#EEF2F6",label="Категория свободна?"];
+e1 [label="Запретить удаление. Предложения связаны с\nкатегорией"];
+s1 -> g1;
+g1 -> s2 [label="Да"];
+g1 -> e1 [label="Нет"];
+e1 -> end;
+s2 -> s3;
+s3 -> end;
+}
